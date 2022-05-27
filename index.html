@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chí Đức - Profile</title>
+    <!-- Favicon -->
+    <link rel="icon" href="icon1.jpg" type="image/x-icon" />
+    <!-- Core theme CSS -->
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+    <!-- Parallax Pixel Background Animation -->
+    <section class="animated-background">
+      <div id="stars1"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </section>
+    <!-- End of Parallax Pixel Background Animation -->
+
+    <a id="profilePicture" href="#popup">
+      <img src="icon.jpg" alt="Profile Picture">
+    </a>
+
+    <div class="overlay" id="popup">
+      <div class="popup">
+        <div class="popup-photo">
+          <a href="#" target="_blank">
+            <img src="#" alt="Profile Picture">
+          </a>
+        </div>
+        <a class="popup-close" onclick="history.back()">&times;</a>
+      </div>
+    </div>
+
+    <div id="userName">
+      <h2>Nguyễn Chí Đức</h2>
+    </div>
+
+    <div id="links">
+      <a class="link" href="https://github.com/ducdz123/" target="_blank">
+        <i class="github">&nbsp;</i>Github
+      </a>
+      <a class="link" href="http://www.zalo.me/84396134792" target="_blank">
+        <i class="telegram">&nbsp;</i>Zalo
+      </a>
+      <a class="link" href="https://www.facebook.com/C.duc0705" target="_blank">
+        Facebook
+      </a>
+      </a>
+      <a class="link" href="mailto:ncduc0705@gmail.com" target="_blank">
+        <i class="google-plus-g">&nbsp;</i>Gmail
+      </a>
+      
+      <a id="ctrlaudio" class="link kinda-link" type="button" value="LÊN NHẠC" onclick="play()">Play music</a>
+      <audio id="audio" src="music.mp3"></audio>
+    </div>
+
+    <div id="hashtag">
+      #chidduucc❤
+    </div>
+    <script>
+      function play(){
+        var a = document.getElementById('audio');
+        var link = document.getElementById('ctrlaudio');
+        a.play();
+        link.setAttribute("onclick", "pause()");
+        link.innerHTML = "Pause music";
+      }
+      function pause(){
+        var a = document.getElementById('audio');
+        var link = document.getElementById('ctrlaudio');
+        a.pause();
+        link.setAttribute("onclick", "play()");
+        link.innerHTML = "Play music";
+      }
+      </script>
+  </body>
+</html>
